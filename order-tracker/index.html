@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      /* margin: 0; */
+      padding: 0;
+    }
+
+    .track {
+      padding: 30px 0;
+      -webkit-overflow-scrolling: touch;
+      overflow-x: scroll;
+      /* background: red; */
+    }
+
+    .track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tracker-wrap {
+      /* outline: 1px dashed; */
+      display: inline-block;
+      padding: 0 10vw;
+    }
+
+    .tracker {
+      position: relative;
+      overflow: hidden;
+      width: 900px;
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 10px;
+    }
+
+    .tracker::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30%;
+      height: 100%;
+      border-radius: 10px;
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="track">
+    <div class="tracker-wrap">
+      <div class="tracker"></div>
+    </div>
+  </div>
+  <p>hello world</p>
+</body>
+
+</html>
