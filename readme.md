@@ -1,4 +1,4 @@
-# UI 레퍼런스
+# UI ISSUE
 
 어떻게 만들었는지 궁금한 것들 prototype으로 만들어 봄
 
@@ -32,3 +32,22 @@ A 요소(부모)의 너비를 inline-block일 경우 포함블록의 너비가 �
 ```
 
 를 하게되면 해당 요소의 스크롤을 안보이게 한다.
+
+<hr />
+
+## safari thead gradient issue
+
+![image](https://user-images.githubusercontent.com/8033966/156692728-cfd7c9da-12dd-4a8b-8ba1-6eb8ed4e0c12.png)
+
+```
+background: linear-gradient(90deg, #121212 0%, #874ECC 100%);
+```
+thead에 gradien 를 넣었지만 각 th 셀마다 그라이언트가 적용이 됨
+
+**해결**
+```
+background-attachment: fixed;
+```
+로 해결
+
+```
